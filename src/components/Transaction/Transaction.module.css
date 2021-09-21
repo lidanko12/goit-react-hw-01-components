@@ -1,0 +1,45 @@
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  text-align: center;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+.transaction-history {
+  width: 800px;
+  margin-top: 20 px;
+  color: #212529;
+  vertical-align: top;
+  border-color: #1371cf;
+
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+.transaction-history > thead {
+  vertical-align: bottom;
+  background-color: rgb(221, 54, 12);
+  color: white;
+}
+.transaction-history > :not(:last-child) > :last-child > * {
+  border-bottom-color: currentColor;
+}
+.transaction-history > tbody {
+  vertical-align: inherit;
+}
+.transaction-history > tbody > tr:nth-of-type(odd) {
+  --table-accent-bg: rgba(0, 0, 0, 0.05);
+  color: #212529;
+}
+.transaction-history > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+  background-color: transparent;
+  background-image: linear-gradient(
+    var(--table-accent-bg),
+    var(--table-accent-bg)
+  );
+  border-bottom-width: 1px;
+}
